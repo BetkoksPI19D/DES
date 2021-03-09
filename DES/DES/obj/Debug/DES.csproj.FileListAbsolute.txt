@@ -1,9 +1,0 @@
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\bin\Debug\DES.exe.config
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\bin\Debug\DES.exe
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\bin\Debug\DES.pdb
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.csprojAssemblyReference.cache
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.Form1.resources
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.Properties.Resources.resources
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.csproj.GenerateResource.cache
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.exe
-C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DES\DES\DES\obj\Debug\DES.pdb
