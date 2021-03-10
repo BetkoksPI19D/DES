@@ -42,25 +42,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ECBButton = new System.Windows.Forms.RadioButton();
-            this.CBCButton = new System.Windows.Forms.RadioButton();
-            this.ToFileCheckBox = new System.Windows.Forms.CheckBox();
-            this.FromFileCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 209);
+            this.button1.Location = new System.Drawing.Point(342, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Encrypt";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(691, 214);
+            this.button2.Location = new System.Drawing.Point(767, 210);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 1;
@@ -163,57 +158,11 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Decrypted text:";
             // 
-            // ECBButton
-            // 
-            this.ECBButton.AutoSize = true;
-            this.ECBButton.Location = new System.Drawing.Point(152, 124);
-            this.ECBButton.Name = "ECBButton";
-            this.ECBButton.Size = new System.Drawing.Size(56, 21);
-            this.ECBButton.TabIndex = 14;
-            this.ECBButton.TabStop = true;
-            this.ECBButton.Text = "ECB";
-            this.ECBButton.UseVisualStyleBackColor = true;
-            // 
-            // CBCButton
-            // 
-            this.CBCButton.AutoSize = true;
-            this.CBCButton.Location = new System.Drawing.Point(214, 123);
-            this.CBCButton.Name = "CBCButton";
-            this.CBCButton.Size = new System.Drawing.Size(56, 21);
-            this.CBCButton.TabIndex = 15;
-            this.CBCButton.TabStop = true;
-            this.CBCButton.Text = "CBC";
-            this.CBCButton.UseVisualStyleBackColor = true;
-            // 
-            // ToFileCheckBox
-            // 
-            this.ToFileCheckBox.AutoSize = true;
-            this.ToFileCheckBox.Location = new System.Drawing.Point(319, 216);
-            this.ToFileCheckBox.Name = "ToFileCheckBox";
-            this.ToFileCheckBox.Size = new System.Drawing.Size(69, 21);
-            this.ToFileCheckBox.TabIndex = 16;
-            this.ToFileCheckBox.Text = "To file";
-            this.ToFileCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FromFileCheckBox
-            // 
-            this.FromFileCheckBox.AutoSize = true;
-            this.FromFileCheckBox.Location = new System.Drawing.Point(773, 220);
-            this.FromFileCheckBox.Name = "FromFileCheckBox";
-            this.FromFileCheckBox.Size = new System.Drawing.Size(84, 21);
-            this.FromFileCheckBox.TabIndex = 17;
-            this.FromFileCheckBox.Text = "From file";
-            this.FromFileCheckBox.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 271);
-            this.Controls.Add(this.FromFileCheckBox);
-            this.Controls.Add(this.ToFileCheckBox);
-            this.Controls.Add(this.CBCButton);
-            this.Controls.Add(this.ECBButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -251,10 +200,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton ECBButton;
-        private System.Windows.Forms.RadioButton CBCButton;
-        private System.Windows.Forms.CheckBox ToFileCheckBox;
-        private System.Windows.Forms.CheckBox FromFileCheckBox;
     }
 }
 
