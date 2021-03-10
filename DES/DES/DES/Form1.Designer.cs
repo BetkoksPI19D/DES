@@ -66,6 +66,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Decrypt";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PrimaryTextBox
             // 
@@ -198,7 +199,7 @@
             // FromFileCheckBox
             // 
             this.FromFileCheckBox.AutoSize = true;
-            this.FromFileCheckBox.Location = new System.Drawing.Point(773, 220);
+            this.FromFileCheckBox.Location = new System.Drawing.Point(591, 43);
             this.FromFileCheckBox.Name = "FromFileCheckBox";
             this.FromFileCheckBox.Size = new System.Drawing.Size(84, 21);
             this.FromFileCheckBox.TabIndex = 17;
