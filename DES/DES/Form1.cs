@@ -54,11 +54,12 @@ namespace DES
         //    return null;
         //}
 
-        public string Encryptd(string strWord, string strKey, bool ECB)
+        public string ENcryptd(string strWord, string strKey, bool ECB)
         {
             byte[] key = new byte[8];
             byte[] byteArray;
             byte[] hash;
+            byte[] setIV = { 10, 20, 30, 40, 50, 60, 70, 80};
 
             try
             {
@@ -76,7 +77,7 @@ namespace DES
                 {
                     DES.Mode = CipherMode.CBC;
                     DES.Key = key;
-                    DES.GenerateIV();
+                    DES.IV = setIV;
                 }
                 byteArray = Encoding.ASCII.GetBytes(strWord);
                 MemoryStream memStream = new MemoryStream();
@@ -92,10 +93,93 @@ namespace DES
                 throw exc;
             }
         }
+        public string DEcryptd(string strWord, string strKey, bool ECB)
+        {
+            byte[] setIV = { 10, 20, 30, 40, 50, 60, 70, 80 };
+            byte[] key = new byte[8];
+            byte[] byteArray = new byte[strWord.Length];
+            byte[] hash;
 
+            try
+            {
+                MD5CryptoServiceProvider hsh = new MD5CryptoServiceProvider();
+                hash = hsh.ComputeHash(Encoding.ASCII.GetBytes(strKey));
+
+                for (int i = 0; i < 8; i++)
+                    key[i] = hash[i];
+
+                DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
+                if (ECB == true)
+                {
+                    DES.Mode = CipherMode.ECB;
+                    DES.Key = key;
+                }
+                else
+                {
+                    DES.Mode = CipherMode.CBC;
+                    DES.Key = key;
+                    DES.IV = setIV;
+                }
+                byteArray = Convert.FromBase64String(strWord);
+                MemoryStream memStream = new MemoryStream();
+                CryptoStream cryStream = new CryptoStream(memStream, DES.CreateDecryptor(), CryptoStreamMode.Write);
+                cryStream.Write(byteArray, 0, byteArray.Length);
+                cryStream.FlushFinalBlock();
+                
+                Encoding encode = Encoding.ASCII;
+                return encode.GetString(memStream.ToArray());
+
+            }
+            catch (Exception exc)
+            {
+                throw exc;
+            }
+        }
+
+        //Start Encrypt button
         private void button1_Click(object sender, EventArgs e)
         {
-           
+           if(ECBButton.Checked == true)
+            {
+                string Encrypted = ENcryptd(PrimaryTextBox.Text, KeyBox1.Text, true);
+                if (ToFileCheckBox.Checked)
+                    File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DEStexts\ForEncrypt.txt", Encrypted);
+                EncryptedResultBox.Text = Encrypted;
+            }
+           else if (CBCButton.Checked == true)
+            {
+                string Encrypted = ENcryptd(PrimaryTextBox.Text, KeyBox1.Text, false);
+                if (ToFileCheckBox.Checked)
+                    File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DEStexts\ForEncrypt.txt", Encrypted);
+                EncryptedResultBox.Text = Encrypted;
+            }
+        }
+
+        //Start Decrypt button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ECBButton.Checked == true)
+            {
+                if (FromFileCheckBox.Checked)
+                {
+                    DecryptedTextBox.Text = DEcryptd(File.ReadAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DEStexts\ForEncrypt.txt"), KeyBox2.Text, true);
+                }
+                else
+                {
+                    DecryptedTextBox.Text = DEcryptd(EncryptedTextBox.Text, KeyBox2.Text, true);
+                }
+            }
+            else if (CBCButton.Checked == true)
+            {
+                if (FromFileCheckBox.Checked)
+                {
+                    DecryptedTextBox.Text = DEcryptd(File.ReadAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\DEStexts\ForEncrypt.txt"), KeyBox2.Text, false);
+                }
+                else
+                {
+                    DecryptedTextBox.Text = DEcryptd(EncryptedTextBox.Text, KeyBox2.Text, false);
+                }
+            }
         }
     }
 }

@@ -50,7 +50,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 209);
+            this.button1.Location = new System.Drawing.Point(152, 153);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 0;
@@ -60,12 +60,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(691, 214);
+            this.button2.Location = new System.Drawing.Point(591, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 1;
             this.button2.Text = "Decrypt";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PrimaryTextBox
             // 
@@ -83,7 +84,7 @@
             // 
             // EncryptedResultBox
             // 
-            this.EncryptedResultBox.Location = new System.Drawing.Point(152, 163);
+            this.EncryptedResultBox.Location = new System.Drawing.Point(152, 217);
             this.EncryptedResultBox.Name = "EncryptedResultBox";
             this.EncryptedResultBox.Size = new System.Drawing.Size(265, 22);
             this.EncryptedResultBox.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             // DecryptedTextBox
             // 
-            this.DecryptedTextBox.Location = new System.Drawing.Point(591, 163);
+            this.DecryptedTextBox.Location = new System.Drawing.Point(591, 217);
             this.DecryptedTextBox.Name = "DecryptedTextBox";
             this.DecryptedTextBox.Size = new System.Drawing.Size(251, 22);
             this.DecryptedTextBox.TabIndex = 7;
@@ -130,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 166);
+            this.label3.Location = new System.Drawing.Point(44, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 10;
@@ -157,7 +158,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(482, 168);
+            this.label6.Location = new System.Drawing.Point(482, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 17);
             this.label6.TabIndex = 13;
@@ -188,7 +189,7 @@
             // ToFileCheckBox
             // 
             this.ToFileCheckBox.AutoSize = true;
-            this.ToFileCheckBox.Location = new System.Drawing.Point(319, 216);
+            this.ToFileCheckBox.Location = new System.Drawing.Point(233, 163);
             this.ToFileCheckBox.Name = "ToFileCheckBox";
             this.ToFileCheckBox.Size = new System.Drawing.Size(69, 21);
             this.ToFileCheckBox.TabIndex = 16;
@@ -198,7 +199,7 @@
             // FromFileCheckBox
             // 
             this.FromFileCheckBox.AutoSize = true;
-            this.FromFileCheckBox.Location = new System.Drawing.Point(773, 220);
+            this.FromFileCheckBox.Location = new System.Drawing.Point(591, 43);
             this.FromFileCheckBox.Name = "FromFileCheckBox";
             this.FromFileCheckBox.Size = new System.Drawing.Size(84, 21);
             this.FromFileCheckBox.TabIndex = 17;
